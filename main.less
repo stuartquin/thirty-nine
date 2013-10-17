@@ -1,0 +1,110 @@
+@bgSidebar: #006A55;
+@fgSidebar: #00A383;
+@fgTitle: #5ED1BA;
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+body, html {
+  font-family: "Helvetica";
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+
+  background: #f4f4f7;
+  color: #444;
+}
+
+.title {
+    padding-top: 10px;
+}
+
+.sidebar {
+  width: 240px;
+  height: 100%;
+  border-right: #CCC solid 1px;
+
+  float: left;
+  padding-left: 35px;
+
+  background-color: @bgSidebar;
+  color: @fgSidebar;
+
+  h1{
+    font-size: 85px;
+    color: @fgTitle;
+    margin: 0;
+    padding: 0;
+  
+    float: left;
+  }
+  
+  h2{
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    
+    float: left;
+    padding-top: 32px;
+    padding-left: 3px;
+    font-size: 30px;
+  }
+
+  .contents {
+    clear: both;
+  }
+
+  .info {
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+
+    .avatar {
+      img{
+        .rounded-corners(5px);
+        border-style: solid;
+        border-color: @fgTitle;
+      }
+    }
+
+    .details {
+      float: left;
+      color: fgSidebar;
+      font-size: 12px;
+    }
+  }
+}
+
+
+.main {
+  height: 100%;
+  float: left;
+  padding-left: 40px;
+
+  font-family: Georgia, Times, "Times New Roman", serif;
+
+  .entry {
+    clear:  both;
+    width: 800px;
+
+    h2, h3 {
+      width: 50%;
+      float: left;
+    }
+
+    h3 {
+      text-align: right;
+    }
+
+    article {
+      clear:  both;
+    }
+  }
+}
